@@ -1,0 +1,7 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80 
+RewriteCond %{REQUEST_URI} world-editable-chat
+RewriteRule ^(.*)$ https://jgross.scripts.mit.edu/world-editable-chat/$1 [R,L]
+ExpiresActive On
+ExpiresDefault "access"
+DirectoryIndex chat.py
